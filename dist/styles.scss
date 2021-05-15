@@ -1,0 +1,130 @@
+@import 'variables';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.calculator__container {
+  margin: auto;
+  width: 360px;
+  background-color: hsl(222, 26%, 31%);
+}
+
+.calculator__header {
+  display: flex;
+  justify-content: space-between;
+  height: 75px;
+  h2 {
+    margin: auto 0.5em;
+    font-family: $font;
+    font-size: 32px;
+    font-weight: $fontWeight;
+    color: $fontColor;
+  }
+}
+.themeContainer {
+  position: relative;
+  display: flex;
+  margin: 0;
+}
+.theme__title {
+  margin: auto 0.5em;
+  position: absolute;
+  bottom: 50%;
+  top: 50%;
+  right: 100%;
+  font-family: $font;
+  color: white;
+  margin-right: 1em;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.15em;
+}
+.slideContainer {
+  margin: auto;
+
+  .slider {
+    -webkit-appearance: none;
+    border-radius: 25px;
+    width: 85px;
+    height: 30px;
+    background: hsl(223, 31%, 20%);
+    padding: 0 0.5em;
+  }
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px; /* Set a specific slider handle width */
+    height: 20px; /* Slider handle height */
+    cursor: pointer;
+    border-radius: 50%;
+    background: hsl(6, 63%, 50%);
+  }
+  .slider::-moz-range-thumb {
+    width: 20px; /* Set a specific slider handle width */
+    height: 20px; /* Slider handle height */
+    cursor: pointer;
+    border-radius: 50%;
+    background: hsl(6, 63%, 50%);
+  }
+  datalist {
+    display: flex;
+    justify-content: space-between;
+    font-family: $font;
+    font-size: 12px;
+    color: hsl(0, 0, 100%);
+    top: 100%;
+    padding-left: 0.7em;
+    padding-right: 0.7em;
+  }
+}
+.screenContainer {
+  margin: auto;
+  padding: 1.5em 0;
+}
+.screen {
+  width: 300px;
+  height: 100px;
+  margin: auto;
+  border-radius: 10px;
+  background: hsl(224, 36%, 15%);
+  input {
+    width: inherit;
+    height: inherit;
+    background-color: transparent;
+    text-align: right;
+    font-size: $fontSize;
+    border-radius: inherit;
+    border: none;
+    padding-right: 1em;
+    border: none;
+    box-shadow: ;
+  }
+}
+
+.buttonContainer {
+  width: 300px;
+  margin: auto;
+  padding: 1em 0;
+  justify-content: center;
+  align-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  button {
+    width: 70px;
+    height: 70px;
+    margin: 0.35em;
+    font-size: 25px;
+    font-weight: $fontWeight;
+    font-family: $font;
+    color: hsl(221, 14%, 31%);
+    border-radius: 10px;
+  }
+  .span-two {
+    grid-column: span 2;
+    width: 125px;
+    margin: auto 0;
+  }
+}
