@@ -5,19 +5,27 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  height: 100vh;
+  background-color: hsl(222, 26%, 31%);
+  margin: 1em auto 0 auto;
+}
 
 .calculator__container {
   margin: auto;
-  width: 360px;
-  background-color: hsl(222, 26%, 31%);
+  width: 375px;
+  height: 95%;
 }
 
 .calculator__header {
   display: flex;
   justify-content: space-between;
   height: 75px;
+  margin: 1em auto 0 auto;
+  padding: 0 24px;
+
   h2 {
-    margin: auto 0.5em;
+    margin: auto 0;
     font-family: $font;
     font-size: 32px;
     font-weight: $fontWeight;
@@ -51,7 +59,6 @@
     width: 85px;
     height: 30px;
     background: hsl(223, 31%, 20%);
-    padding: 0 0.5em;
   }
   .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
@@ -61,6 +68,7 @@
     cursor: pointer;
     border-radius: 50%;
     background: hsl(6, 63%, 50%);
+    margin-left: 0.6em;
   }
   .slider::-moz-range-thumb {
     width: 20px; /* Set a specific slider handle width */
@@ -85,37 +93,48 @@
   padding: 1.5em 0;
 }
 .screen {
-  width: 300px;
+  width: 330px;
   height: 100px;
   margin: auto;
   border-radius: 10px;
   background: hsl(224, 36%, 15%);
+
   input {
     width: inherit;
     height: inherit;
     background-color: transparent;
     text-align: right;
-    font-size: $fontSize;
-    border-radius: inherit;
+    font-size: $fontSize * 1.5;
+    border-radius: 10px;
+    padding: 0 0.5em;
     border: none;
-    padding-right: 1em;
-    border: none;
-    box-shadow: ;
+    font-weight: 700;
+  }
+  input::placeholder {
+    color: white;
   }
 }
 
 .buttonContainer {
-  width: 300px;
+  width: 320px;
+  height: 60%;
   margin: auto;
-  padding: 1em 0;
+  padding: 1em;
   justify-content: center;
   align-content: center;
   display: grid;
-  grid-template-columns: repeat(4, 80px);
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, 64px);
+  grid-template-rows: repeat(5, minmax(64px, auto));
+  background-color: hsl(224, 36%, 15%);
+  justify-content: space-between;
+  border-radius: 10px;
+
   button {
-    width: 70px;
-    height: 70px;
-    margin: 0.35em;
+    width: 100%;
+    height: 64px;
+    padding: 0;
+    border: none;
     font-size: 25px;
     font-weight: $fontWeight;
     font-family: $font;
@@ -124,7 +143,8 @@
   }
   .span-two {
     grid-column: span 2;
-    width: 125px;
+    width: 120px;
+    height: 60px;
     margin: auto 0;
   }
 }
