@@ -8,9 +8,8 @@
           box-sizing: border-box;
 }
 
-body {
+.bodyContainer {
   height: 100vh;
-  background-color: #3a4764;
   margin: 1em auto 0 auto;
   overflow: hidden;
 }
@@ -33,12 +32,11 @@ body {
   padding: 0 24px;
 }
 
-.calculator__header h2 {
+.calculator__header .calculator__title {
   margin: auto 0;
   font-family: "Spartan";
   font-size: 32px;
   font-weight: 700;
-  color: white;
 }
 
 .theme__container {
@@ -56,7 +54,6 @@ body {
   top: 50%;
   right: 100%;
   font-family: "Spartan";
-  color: white;
   margin-right: 1em;
   text-transform: uppercase;
   font-size: 13px;
@@ -70,9 +67,8 @@ body {
 .slide__container .slider {
   -webkit-appearance: none;
   border-radius: 25px;
-  width: 85px;
+  width: 95px;
   height: 30px;
-  background: #232c43;
 }
 
 .slide__container .slider::-webkit-slider-thumb {
@@ -84,8 +80,31 @@ body {
   /* Slider handle height */
   cursor: pointer;
   border-radius: 50%;
-  background: #d03f2f;
   margin-left: 0.6em;
+}
+
+.slide__container .theme1::-webkit-slider-thumb {
+  background: #d03f2f;
+}
+
+.slide__container .theme1::-moz-range-thumb {
+  background: #d03f2f;
+}
+
+.slide__container .theme2::-webkit-slider-thumb {
+  background: #d03f2f;
+}
+
+.slide__container .theme2::-moz-range-thumb {
+  background: #ca5502;
+}
+
+.slide__container .theme3::-webkit-slider-thumb {
+  background: #00e0d1;
+}
+
+.slide__container .theme3::-moz-range-thumb {
+  background: #00e0d1;
 }
 
 .slide__container .slider::-moz-range-thumb {
@@ -95,7 +114,6 @@ body {
   /* Slider handle height */
   cursor: pointer;
   border-radius: 50%;
-  background: #d03f2f;
 }
 
 .slide__container datalist {
@@ -171,7 +189,6 @@ body {
   justify-items: center;
   margin: auto;
   padding: 1.25em 0;
-  background-color: #182034;
   border-radius: 10px;
 }
 
@@ -183,10 +200,7 @@ body {
   font-size: 25px;
   font-weight: 700;
   font-family: "Spartan";
-  color: #444b5a;
   border-radius: 10px;
-  -webkit-box-shadow: 0 5px #b4a597;
-          box-shadow: 0 5px #b4a597;
 }
 
 .button__container .span-two {
@@ -197,18 +211,11 @@ body {
 
 .button__container .btn__del,
 .button__container .btn__reset {
-  background-color: #637097;
-  -webkit-box-shadow: 0 5px #404e72;
-          box-shadow: 0 5px #404e72;
-  color: white;
   font-size: 18px;
   text-transform: uppercase;
 }
 
 .button__container .btn__equal {
-  background-color: #d03f2f;
-  -webkit-box-shadow: 0 5px #93261a;
-          box-shadow: 0 5px #93261a;
   color: white;
   font-size: 20px;
 }

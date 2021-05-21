@@ -1,13 +1,13 @@
 @import 'variables';
-@import '/colors';
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body {
+.bodyContainer {
   height: 100vh;
-  background-color: hsl(222, 26%, 31%);
+
   margin: 1em auto 0 auto;
   overflow: hidden;
 }
@@ -25,12 +25,11 @@ body {
   margin: 1em auto 0 auto;
   padding: 0 24px;
 
-  h2 {
+  .calculator__title {
     margin: auto 0;
     font-family: $font;
     font-size: 32px;
     font-weight: $fontWeight;
-    color: $fontColor;
   }
 }
 .theme__container {
@@ -45,7 +44,7 @@ body {
   top: 50%;
   right: 100%;
   font-family: $font;
-  color: white;
+
   margin-right: 1em;
   text-transform: uppercase;
   font-size: 13px;
@@ -59,7 +58,6 @@ body {
     border-radius: 25px;
     width: 95px;
     height: 30px;
-    background: hsl(223, 31%, 20%);
   }
   .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
@@ -68,15 +66,31 @@ body {
     height: 20px; /* Slider handle height */
     cursor: pointer;
     border-radius: 50%;
-    background: hsl(6, 63%, 50%);
     margin-left: 0.6em;
+  }
+  .theme1::-webkit-slider-thumb {
+    background: hsl(6, 63%, 50%);
+  }
+  .theme1::-moz-range-thumb {
+    background: hsl(6, 63%, 50%);
+  }
+  .theme2::-webkit-slider-thumb {
+    background: hsl(6, 63%, 50%);
+  }
+  .theme2::-moz-range-thumb {
+    background: hsl(25, 98%, 40%);
+  }
+  .theme3::-webkit-slider-thumb {
+    background: hsl(176, 100%, 44%);
+  }
+  .theme3::-moz-range-thumb {
+    background: hsl(176, 100%, 44%);
   }
   .slider::-moz-range-thumb {
     width: 20px; /* Set a specific slider handle width */
     height: 20px; /* Slider handle height */
     cursor: pointer;
     border-radius: 50%;
-    background: hsl(6, 63%, 50%);
   }
   datalist {
     display: flex;
@@ -128,7 +142,6 @@ body {
 
   margin: auto;
   padding: 1.25em 0;
-  background-color: hsl(224, 36%, 15%);
 
   border-radius: 10px;
 
@@ -140,10 +153,9 @@ body {
     font-size: 25px;
     font-weight: $fontWeight;
     font-family: $font;
-    color: hsl(221, 14%, 31%);
     border-radius: 10px;
-    box-shadow: 0 5px hsl(28, 16%, 65%);
   }
+
   .span-two {
     grid-column: span 2;
     width: 130px;
@@ -151,15 +163,10 @@ body {
   }
   .btn__del,
   .btn__reset {
-    background-color: hsl(225, 21%, 49%);
-    box-shadow: 0 5px hsl(224, 28%, 35%);
-    color: white;
     font-size: 18px;
     text-transform: uppercase;
   }
   .btn__equal {
-    background-color: hsl(6, 63%, 50%);
-    box-shadow: 0 5px hsl(6, 70%, 34%);
     color: white;
     font-size: 20px;
   }

@@ -14,50 +14,51 @@
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
-<body>
+<body onload="getThemeVal()" class="bodyContainer">
 
 <div class="calculator__container">
   <div class="calculator__header">
-    <h2>calc</h2> 
+    <h2 class="calculator__title">calc</h2> 
     <div class="theme__container">
         <p class="theme__title">Theme</p>
-        <div class="slide__container" onClick={this.toggleThemeType}>
+        <div class="slide__container">
         
+          
         
           <datalist id="tickmarks" class="slide__options">
-          <option value="1" label="1"></option>
-          <option value="2" label="2"></option>
-          <option value="3" label="3"></option>
+          <option data-id="1" value="1" label="1"></option>
+          <option data-id="2" value="2" label="2"></option>
+          <option data-id="3" value="3" label="3"></option>
           </datalist>
-            <input class="slider" type="range" list="tickmarks" min="1"  max="3" value="1">
+            <input class="slider"  id="sliderValue" type="range" list="tickmarks" min="1"  max="3" value="1" > 
         </div>
       </div>
     </div>
     <div class="screen__container">
       <div class="screen">
         
-          <input type="number" id="cal" name="calDisplay" placeholder="0" disabled>
+          <input type="number" id="cal" name="calDisplay" placeholder="0" class="calInput" disabled>
 
       </div>
     </div>
     <div class="button__container">
       
-      <button data-number>7</button>
-      <button data-number>8</button>
-      <button data-number>9</button>
+      <button class="btn" data-number>7</button>
+      <button class="btn" data-number>8</button>
+      <button class="btn" data-number>9</button>
       <button data-delete class="btn__del">DEL</button>
-      <button data-number>4</button>
-      <button data-number>5</button>
-      <button data-number>6</button>
-      <button data-operation>+</button>
-      <button data-number>1</button>
-      <button data-number>2</button>
-      <button data-number>3</button>
-      <button data-operation>-</button>
-      <button data-number>.</button>
-      <button data-number>0</button>
-      <button data-operation>/</button>
-      <button data-operation>*</button>
+      <button class="btn" data-number>4</button>
+      <button class="btn" data-number>5</button>
+      <button class="btn" data-number>6</button>
+      <button class="btn" data-operation>+</button>
+      <button class="btn" data-number>1</button>
+      <button class="btn" data-number>2</button>
+      <button class="btn" data-number>3</button>
+      <button class="btn" data-operation>-</button>
+      <button class="btn" data-number>.</button>
+      <button class="btn" data-number>0</button>
+      <button class="btn" data-operation>/</button>
+      <button class="btn" data-operation>*</button>
       <button data-all-clear class="span-two btn__reset">Reset</button>
       <button data-equals class="span-two btn__equal">=</button>
       </div>
@@ -70,6 +71,6 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
-  <script src="/index.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>
