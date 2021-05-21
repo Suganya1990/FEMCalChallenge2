@@ -69,6 +69,7 @@
   border-radius: 25px;
   width: 95px;
   height: 30px;
+  padding-right: 1em;
 }
 
 .slide__container .slider::-webkit-slider-thumb {
