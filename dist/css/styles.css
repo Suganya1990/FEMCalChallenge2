@@ -12,6 +12,7 @@ body {
   height: 100vh;
   background-color: #3a4764;
   margin: 1em auto 0 auto;
+  overflow: hidden;
 }
 
 .calculator__container {
@@ -40,7 +41,7 @@ body {
   color: white;
 }
 
-.themeContainer {
+.theme__container {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -62,11 +63,11 @@ body {
   letter-spacing: 0.15em;
 }
 
-.slideContainer {
+.slide__container {
   margin: auto;
 }
 
-.slideContainer .slider {
+.slide__container .slider {
   -webkit-appearance: none;
   border-radius: 25px;
   width: 85px;
@@ -74,7 +75,7 @@ body {
   background: #232c43;
 }
 
-.slideContainer .slider::-webkit-slider-thumb {
+.slide__container .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 20px;
@@ -87,7 +88,7 @@ body {
   margin-left: 0.6em;
 }
 
-.slideContainer .slider::-moz-range-thumb {
+.slide__container .slider::-moz-range-thumb {
   width: 20px;
   /* Set a specific slider handle width */
   height: 20px;
@@ -97,7 +98,7 @@ body {
   background: #d03f2f;
 }
 
-.slideContainer datalist {
+.slide__container datalist {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -112,7 +113,7 @@ body {
   padding-right: 0.7em;
 }
 
-.screenContainer {
+.screen__container {
   margin: auto;
   padding: 1.5em 0;
 }
@@ -153,33 +154,30 @@ body {
   color: white;
 }
 
-.buttonContainer {
-  width: 320px;
+.button__container {
+  width: 330px;
   height: 60%;
-  margin: auto;
-  padding: 1em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (64px)[4];
+      grid-template-columns: repeat(4, 64px);
+  gap: 0.75em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  display: -ms-grid;
-  display: grid;
-  grid-gap: 10px;
-  -ms-grid-columns: (64px)[4];
-      grid-template-columns: repeat(4, 64px);
-  -ms-grid-rows: (minmax(64px, auto))[5];
-      grid-template-rows: repeat(5, minmax(64px, auto));
+  justify-items: center;
+  margin: auto;
+  padding: 1.25em 0;
   background-color: #182034;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   border-radius: 10px;
 }
 
-.buttonContainer button {
+.button__container button {
   width: 100%;
-  height: 64px;
+  height: 60px;
   padding: 0;
   border: none;
   font-size: 25px;
@@ -187,12 +185,31 @@ body {
   font-family: "Spartan";
   color: #444b5a;
   border-radius: 10px;
+  -webkit-box-shadow: 0 5px #b4a597;
+          box-shadow: 0 5px #b4a597;
 }
 
-.buttonContainer .span-two {
+.button__container .span-two {
   grid-column: span 2;
-  width: 120px;
+  width: 130px;
   height: 60px;
-  margin: auto 0;
+}
+
+.button__container .btn__del,
+.button__container .btn__reset {
+  background-color: #637097;
+  -webkit-box-shadow: 0 5px #404e72;
+          box-shadow: 0 5px #404e72;
+  color: white;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.button__container .btn__equal {
+  background-color: #d03f2f;
+  -webkit-box-shadow: 0 5px #93261a;
+          box-shadow: 0 5px #93261a;
+  color: white;
+  font-size: 20px;
 }
 /*# sourceMappingURL=styles.css.map */
