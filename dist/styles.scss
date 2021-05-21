@@ -32,7 +32,7 @@ body {
     color: $fontColor;
   }
 }
-.themeContainer {
+.theme__container {
   position: relative;
   display: flex;
   margin: 0;
@@ -50,7 +50,7 @@ body {
   font-size: 13px;
   letter-spacing: 0.15em;
 }
-.slideContainer {
+.slide__container {
   margin: auto;
 
   .slider {
@@ -88,7 +88,7 @@ body {
     padding-right: 0.7em;
   }
 }
-.screenContainer {
+.screen__container {
   margin: auto;
   padding: 1.5em 0;
 }
@@ -115,7 +115,7 @@ body {
   }
 }
 
-.buttonContainer {
+.button__container {
   width: 320px;
   height: 60%;
   margin: auto;
@@ -146,5 +146,8 @@ body {
     width: 120px;
     height: 60px;
     margin: auto 0;
+  }
+  .btn__del {
+    background-color: ;
   }
 }
