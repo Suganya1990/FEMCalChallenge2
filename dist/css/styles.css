@@ -220,4 +220,29 @@
   color: white;
   font-size: 20px;
 }
+
+@media only screen and (min-width: 375px) {
+  .calculator__container {
+    width: 750px;
+  }
+  .screen__container {
+    width: 750px;
+  }
+  .screen {
+    width: 750px;
+  }
+  .button__container {
+    width: 750px;
+    -ms-grid-columns: (130px)[4];
+        grid-template-columns: repeat(4, 130px);
+  }
+  .button__container button {
+    width: 100px;
+    height: 100px;
+  }
+  .button__container .span-two {
+    width: 225px;
+    height: 100px;
+  }
+}
 /*# sourceMappingURL=styles.css.map */

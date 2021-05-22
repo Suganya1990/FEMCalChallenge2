@@ -7,7 +7,6 @@
 }
 .bodyContainer {
   height: 100vh;
-
   margin: 1em auto 0 auto;
   overflow: hidden;
 }
@@ -170,5 +169,28 @@
   .btn__equal {
     color: white;
     font-size: 20px;
+  }
+}
+@media only screen and (min-width: 375px) {
+  .calculator__container {
+    width: $width;
+  }
+  .screen__container {
+    width: $width;
+  }
+  .screen {
+    width: $width;
+  }
+  .button__container {
+    width: $width;
+    grid-template-columns: repeat(4, 130px);
+    button {
+      width: 100px;
+      height: 100px;
+    }
+    .span-two {
+      width: 225px;
+      height: 100px;
+    }
   }
 }
